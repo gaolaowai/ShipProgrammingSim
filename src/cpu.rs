@@ -1,7 +1,10 @@
+use nanoserde::{DeBin, DeJson, SerBin, SerJson};
+
 
 
 type register = u8;
 
+#[derive(Debug, DeJson, SerJson, SerBin, DeBin)]
 enum Instructions {
     NOP,
     PUSH,
